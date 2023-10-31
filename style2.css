@@ -30,28 +30,27 @@ body {
 .nav-container{
     position: fixed;
     display: flex;
-    background-color: var(--bg-color);
+    background: var(--bg-color);
+    background-size: contain;
     justify-content: space-between;
     height: 100px;
     color: var(--text-color);
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px 12%;
     width: 100%;
     z-index: 9999;
-    opacity: 0.8;
 }
 
 nav .logo {
-    font-size: 35px;
+    font-size: 50px;
     font-weight: 800;
     font-family: var(--font-other);
     letter-spacing: 1px;
-    color: var(--text-color);
     text-decoration: none;
-}
-
-nav .logo span {
-    color: var(--main-color);
+    background: url(img/logo3.png);
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-link {
@@ -306,10 +305,7 @@ li a img{
     transform: scale(1.03) !important;
 }
 
-/* .img-gallery li a Image:hover{
-    filter: grayscale(1);
-    transform: scale(1.03) !important;
-} */
+
 
 .clear {
     clear: both;
@@ -351,17 +347,18 @@ li a img{
 }
 
 .overlay .close{
+    background-image: url(img/close.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
-    top: 50px;
-    left: 49%;
+    top: 60px;
+    left: 50%;
     margin-left: -20px;
-    color: white;
     text-decoration: none;
-    background-color: black;
+    background-color: white;
     border: 1px solid white;
     line-height: 14px;
-    padding: 5px;
-    opacity: 0;
+    opacity: 0; 
 }
 
 .overlay:target .close{
@@ -433,10 +430,6 @@ li a img{
 
 
 /* Activity */
-/* #activities{
-    background: url(img/Background3.jpg), rgba(0, 0, 0, .15) no-repeat;
-    
-} */
 .container-activity{
     width: 100%;
     display: flex;
@@ -460,7 +453,7 @@ li a img{
     margin: 10px;
     transition: translate box-shadow color .25s;
     outline: 1px solid white;
-    /* border: 5px solid yellow; */
+    background-color: var(--bg-color);
     
     
 }
@@ -675,143 +668,3 @@ li a img{
     justify-content: space-between;  
   }
 }
-
-
-
-
-/* Navigasi
-.next, .prev {
-    width: 57px;
-    height: 87px;
-    background-image: url(img/full/next.png);
-    position: absolute;
-    text-indent: -9999px;
-    top: 40%;
-    margin-left: 50px;
-    opacity: 0;
-}
-
-
-.prev{
-    background-image: url(img/full/prev.png);
-    margin-left: -100px;
-}
-
-/* animasi 
-@keyframes fadeAjah{
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes zoomDanFade {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideDownFade {
-    0% {
-        opacity: 0;
-        margin-top: -20px;
-    }
-
-    100% {
-        opacity: 1;
-        margin-top: 0;
-    }
-} */
-
-/* hamburger menu
-
-.menu-toggle{
-    display: none;
-    flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-    position: relative;
-}
-
-.menu-toggle input{
-    position: absolute;
-    width: 40px;
-    height: 28px;
-    opacity: 0;
-    left: -6px;
-    top: -3px;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.menu-toggle span{
-    display: block;
-    width: 28px;
-    height:3px;
-    background: var(--text-color);
-    border-radius: 3px;
-    transition: all 0.5s;
-}
-
-/* hamburger animation 
-.menu-toggle span:nth-child(2){
-    transform-origin: 0 0;
-}
-.menu-toggle span:nth-child(4){
-    transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked ~ span:nth-child(2){
-    background-color: white;
-    transform: rotate(45deg) translate(-1px, -1px);
-}
-
-.menu-toggle input:checked ~ span:nth-child(4){
-    background-color: white;
-    transform: rotate(-45deg) translate(-1px, 0);
-}
-
-.menu-toggle input:checked ~ span:nth-child(3){
-    transform: scale(0);
-}
-
-
-/* Responsive Breakpoint *
-
-
-/* Ukuran Tablet 
-@media screen and (max-width: 768px){
-    .nav-link, .top{
-        width: 50%;
-    }
-    
-}
-
-/* ukuran Mobile 
-@media screen and (max-width: 576px){
-    .menu-toggle{
-        display: flex;
-    }
-    .nav-link{
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 80%;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: var(--main-color);
-        z-index: -1;
-        transform: translate(100%);
-        transition: all 1s;
-    }
-    .
-} */
